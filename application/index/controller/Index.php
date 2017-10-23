@@ -7,7 +7,7 @@ class Index
 {
     public function index()
     {
-        return 'Hello PHP!';
+        return 'Hello PHP! I am Java';
     }  
 	
 	public function addUser()

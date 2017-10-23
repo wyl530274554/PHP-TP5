@@ -50,7 +50,9 @@ class Notes
 	public function queryNote(){
 //        $list = Note::all();
 		$note = new Note();
-		$list = $note->limit(5)->order('id','desc')->select();
-		return json($list);
+		//$list = $note->limit(5)->order('id','desc')->select();
+		//return json($list);
+        $count = $note->count();
+        return $count;
 	}
 }
