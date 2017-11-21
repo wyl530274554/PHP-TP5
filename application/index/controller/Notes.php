@@ -55,4 +55,10 @@ class Notes
         $count = $note->count();
         return $count;
 	}
+
+    public function queryAllNote(){
+        $note = new Note();
+        $list = $note->limit(20)->order('id','desc')->select();
+        return json($list);
+    }
 }
