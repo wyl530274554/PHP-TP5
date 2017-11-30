@@ -11,6 +11,7 @@
 use think\Route;
 // user 别名路由到 index/User 控制器
 Route::alias('note','index/Notes');
+Route::alias('index','index/Index');
 return [
 	
 ];
