@@ -9,7 +9,9 @@ class Index
 {
     public function index()
     {
-        return 'Hello PHP! I am Java';
+        $hostName = exec("hostname");
+        $hostIp = gethostbyname($hostName);
+        return $hostIp;
     }  
 	
 	public function addUser()
@@ -26,6 +28,13 @@ class Index
 		$user->save();
 		return '添加成功：'.$user->id;
 	}
+
+	//获取局域网内IP
+	public function getLocalIp(){
+        $hostName = exec("hostname");
+        $hostIp = gethostbyname($hostName);
+        return $hostIp;
+    }
 
 	public function addPassword(){
         // 取参数
