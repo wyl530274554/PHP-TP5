@@ -74,7 +74,7 @@ class Index
         $pwd = $request->param('password');
         $desc = $request->param('desc');
 
-
+        if(is_null($id)) return 'no way';
 
         $password = Password::get($id);
         $password->user = $user;
