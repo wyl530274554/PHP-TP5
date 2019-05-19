@@ -12,7 +12,14 @@ class Index
         $hostName = exec("hostname");
         $hostIp = gethostbyname($hostName);
         return $hostIp;
-    }  
+    }
+
+    public function getUserInfo(){
+        $user = new Contacts();
+        $user->name = '王言龙';
+        $user->mobile = '18321152272';
+        return json($user);
+    }
 	
 	public function addUser()
 	{
@@ -51,6 +58,29 @@ class Index
         $password->password = $pwd;
         $password->desc = $desc;
         $password->ctime = time();
+        $password->save();
+        return '1';
+    }
+
+    /**
+     * 更新密码
+     */
+    public function updatePassword(){
+        // 取参数
+        $request = Request::instance();
+        $id = $request->param('id');
+        $title = $request->param('title');
+        $user = $request->param('user');
+        $pwd = $request->param('password');
+        $desc = $request->param('desc');
+
+
+
+        $password = Password::get($id);
+        $password->user = $user;
+        $password->title = $title;
+        $password->password = $pwd;
+        $password->desc = $desc;
         $password->save();
         return '1';
     }
