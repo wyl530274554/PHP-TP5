@@ -77,6 +77,9 @@ class Index
         if(is_null($id)) return 'no way';
 
         $password = Password::get($id);
+
+        if(is_null($password)) return;
+
         $password->user = $user;
         $password->title = $title;
         $password->password = $pwd;
