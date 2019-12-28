@@ -5,9 +5,9 @@
 
 <form>
     <div class="main" align="center">
-        <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" width="270"
-             height="130"/><br/><br/>
-        <input id="content" style="height:40px;" class="normalInput" onBlur="inputLineDef(this)"
+        <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" width="180"
+             height="80"/><br/><br/>
+        <input id="content" style="height:40px;padding-left: 5px;padding-right: 5px" class="normalInput" onBlur="inputLineDef(this)"
                onFocus="inputLineFocus(this)"/>
         <input type="button" value="百度一下" onClick="bt_sub()" style="height:40px"/><br/><br/>
         <!--
@@ -70,6 +70,7 @@
     body {
         padding: 0;
         margin: 0 auto;
+        background: #fff;
     }
 
     #footer {
