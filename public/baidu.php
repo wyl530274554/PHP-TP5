@@ -67,6 +67,11 @@
 </script>
 
 <style type="text/css">
+    body {
+        padding: 0;
+        margin: 0 auto;
+    }
+
     #footer {
         height: 40px;
         line-height: 40px;
