@@ -32,7 +32,6 @@
         } else {
             alert("密码错误")
         }
-
     }
 
     function bt_news() {
