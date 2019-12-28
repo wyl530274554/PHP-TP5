@@ -2,6 +2,7 @@
 namespace app\index\controller;
 
 use app\index\model\Contacts;
+use app\index\model\Image;
 use app\index\model\Password;
 use think\Request;
 
@@ -11,7 +12,7 @@ class Index
     {
         $hostName = exec("hostname");
         $hostIp = gethostbyname($hostName);
-        return $hostIp;
+        return '你好未来世界：'.$hostIp;
     }
 
     public function getUserInfo(){
@@ -95,4 +96,8 @@ class Index
         return json($list);
     }
 
+    public function allImages(){
+        $list=Image::all();
+        return json($list);
+    }
 }
