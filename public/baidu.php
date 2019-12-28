@@ -5,7 +5,6 @@
 
 <form>
     <div class="main" align="center">
-        <!--<img src="http://xiazhilu.top/image/baidu_logo_1.jpeg" width="170" height="170" /><br /><br />-->
         <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" width="270"
              height="130"/><br/><br/>
         <input id="content" style="height:40px;" class="normalInput" onBlur="inputLineDef(this)"
