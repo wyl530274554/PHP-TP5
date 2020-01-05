@@ -81,10 +81,21 @@ class Index
 
         if(is_null($password)) return;
 
-        $password->user = $user;
-        $password->title = $title;
-        $password->password = $pwd;
-        $password->desc = $desc;
+        if(!is_null($user)) {
+            $password->user = $user;
+        }
+
+        if(!is_null($title)){
+            $password->title = $title;
+        }
+
+        if(!is_null($pwd)){
+            $password->password = $pwd;
+        }
+
+        if(!is_null($desc)){
+            $password->desc = $desc;
+        }
         $password->save();
         return '1';
     }
